@@ -1,0 +1,37 @@
+{
+  "name": "embsys",
+  "type": "PLATFORM",
+  "configuration": {
+    "description": "",
+    "xsa": "A:\\ECE544_GitHub\\ece544_Proj1\\project_1\\nexysa7fpga.xsa",
+    "xsaPathInPlatform": "embsys\\hw\\nexysa7fpga.xsa",
+    "emulationXsa": "",
+    "emulationXsaPathInPlatform": "",
+    "isCustomFSBL": false,
+    "fsblPath": "",
+    "pmufwElf": "",
+    "flow": "EMBEDDED",
+    "processorsMap": {
+      "microblaze_mcs_0_microblaze_I": "microblaze"
+    },
+    "supportedFamily": "fpga",
+    "componentType": "PLATFORM",
+    "domains": [
+      {
+        "name": "standalone_microblaze_mcs_0_microblaze_I",
+        "displayName": "standalone_microblaze_mcs_0_microblaze_I",
+        "processor": "microblaze_mcs_0_microblaze_I",
+        "cpuType": "microblaze",
+        "cpuInstance": "microblaze_mcs_0_microblaze_I",
+        "os": "standalone",
+        "appTemplate": "empty_application",
+        "isBootDomain": false,
+        "qemuData": "",
+        "qemuArgsFile": "",
+        "pmcQemuArgsFile": "",
+        "isBSPGenReq": false
+      }
+    ],
+    "emptyToolchainConfiguration": []
+  }
+}

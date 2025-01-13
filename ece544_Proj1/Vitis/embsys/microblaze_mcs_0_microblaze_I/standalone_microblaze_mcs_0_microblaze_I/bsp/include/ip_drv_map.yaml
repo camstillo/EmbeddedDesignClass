@@ -1,0 +1,6 @@
+microblaze_mcs_0_iomodule_0:
+- iomodule
+- iomodule
+microblaze_mcs_0_mdm_0:
+- mdm
+- uartlite

@@ -1,0 +1,15 @@
+{
+  "name": "embsys_app",
+  "type": "HOST",
+  "platform": "A:\\ECE544_GitHub\\ece544_Proj1\\Vitis\\embsys\\export\\embsys\\embsys.xpfm",
+  "domain": "standalone_microblaze_mcs_0_microblaze_I",
+  "cpuInstance": "microblaze_mcs_0_microblaze_I",
+  "cpuType": "microblaze",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_microblaze_mcs_0_microblaze_I",
+  "applicationFlow": "EMBEDDED"
+}

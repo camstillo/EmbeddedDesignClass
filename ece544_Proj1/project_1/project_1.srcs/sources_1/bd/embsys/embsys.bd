@@ -1,0 +1,431 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE4F742DD1629F59E",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/embsys",
+      "name": "embsys",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "microblaze_mcs_0": "",
+      "rgbPWM_0": "",
+      "proc_sys_reset_0": ""
+    },
+    "interface_ports": {
+      "dip_switches_16bits": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_I": {
+            "physical_name": "dip_switches_16bits_tri_i",
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "push_buttons_5bits": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_I": {
+            "physical_name": "push_buttons_5bits_tri_i",
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "led_16bits": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "led_16bits_tri_o",
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "gpio_rtl": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "gpio_rtl_tri_o",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "embsys_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clkPWM_0": {
+        "direction": "O"
+      },
+      "controlReg_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "rgbBLUE_0": {
+        "direction": "O"
+      },
+      "rgbGREEN_0": {
+        "direction": "O"
+      },
+      "rgbRED_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "microblaze_mcs_0": {
+        "vlnv": "xilinx.com:ip:microblaze_mcs:3.0",
+        "ip_revision": "23",
+        "xci_name": "embsys_microblaze_mcs_0_0",
+        "xci_path": "ip\\embsys_microblaze_mcs_0_0\\embsys_microblaze_mcs_0_0.xci",
+        "inst_hier_path": "microblaze_mcs_0",
+        "parameters": {
+          "CLK_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "DEBUG_ENABLED": {
+            "value": "2"
+          },
+          "FIT1_No_CLOCKS": {
+            "value": "500"
+          },
+          "GPIO1_BOARD_INTERFACE": {
+            "value": "dip_switches_16bits"
+          },
+          "GPIO2_BOARD_INTERFACE": {
+            "value": "push_buttons_5bits"
+          },
+          "GPIO3_BOARD_INTERFACE": {
+            "value": "led_16bits"
+          },
+          "GPIO4_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "MEMSIZE": {
+            "value": "32768"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_FIT1": {
+            "value": "1"
+          },
+          "USE_GPI4": {
+            "value": "0"
+          },
+          "USE_GPO4": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "GPIO1": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI1_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI1_SIZE": {
+                "value": "16"
+              },
+              "C_GPO1_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO1_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI1": {
+                "value": "1"
+              },
+              "C_USE_GPO1": {
+                "value": "0"
+              }
+            }
+          },
+          "GPIO2": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI2_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI2_SIZE": {
+                "value": "5"
+              },
+              "C_GPO2_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO2_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI2": {
+                "value": "1"
+              },
+              "C_USE_GPO2": {
+                "value": "0"
+              }
+            }
+          },
+          "GPIO3": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI3_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI3_SIZE": {
+                "value": "32"
+              },
+              "C_GPO3_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO3_SIZE": {
+                "value": "16"
+              },
+              "C_USE_GPI3": {
+                "value": "0"
+              },
+              "C_USE_GPO3": {
+                "value": "1"
+              }
+            }
+          },
+          "GPIO4": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI4_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI4_SIZE": {
+                "value": "32"
+              },
+              "C_GPO4_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO4_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI4": {
+                "value": "0"
+              },
+              "C_USE_GPO4": {
+                "value": "1"
+              }
+            }
+          }
+        }
+      },
+      "rgbPWM_0": {
+        "vlnv": "xilinx.com:module_ref:rgbPWM:1.0",
+        "ip_revision": "1",
+        "xci_name": "embsys_rgbPWM_0_0",
+        "xci_path": "ip\\embsys_rgbPWM_0_0\\embsys_rgbPWM_0_0.xci",
+        "inst_hier_path": "rgbPWM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rgbPWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "controlReg": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rgbRED": {
+            "direction": "O"
+          },
+          "rgbGREEN": {
+            "direction": "O"
+          },
+          "rgbBLUE": {
+            "direction": "O"
+          },
+          "clkPWM": {
+            "direction": "O"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "15",
+        "xci_name": "embsys_proc_sys_reset_0_0",
+        "xci_path": "ip\\embsys_proc_sys_reset_0_0\\embsys_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "microblaze_mcs_0_GPIO1": {
+        "interface_ports": [
+          "dip_switches_16bits",
+          "microblaze_mcs_0/GPIO1"
+        ]
+      },
+      "microblaze_mcs_0_GPIO2": {
+        "interface_ports": [
+          "push_buttons_5bits",
+          "microblaze_mcs_0/GPIO2"
+        ]
+      },
+      "microblaze_mcs_0_GPIO3": {
+        "interface_ports": [
+          "led_16bits",
+          "microblaze_mcs_0/GPIO3"
+        ]
+      },
+      "microblaze_mcs_0_GPIO4": {
+        "interface_ports": [
+          "gpio_rtl",
+          "microblaze_mcs_0/GPIO4"
+        ]
+      }
+    },
+    "nets": {
+      "controlReg_0_1": {
+        "ports": [
+          "controlReg_0",
+          "rgbPWM_0/controlReg"
+        ]
+      },
+      "microblaze_mcs_0_FIT1_Toggle": {
+        "ports": [
+          "microblaze_mcs_0/FIT1_Toggle",
+          "rgbPWM_0/clk"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "rgbPWM_0/reset"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "microblaze_mcs_0/Reset",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "rgbPWM_0_clkPWM": {
+        "ports": [
+          "rgbPWM_0/clkPWM",
+          "clkPWM_0"
+        ]
+      },
+      "rgbPWM_0_rgbBLUE": {
+        "ports": [
+          "rgbPWM_0/rgbBLUE",
+          "rgbBLUE_0"
+        ]
+      },
+      "rgbPWM_0_rgbGREEN": {
+        "ports": [
+          "rgbPWM_0/rgbGREEN",
+          "rgbGREEN_0"
+        ]
+      },
+      "rgbPWM_0_rgbRED": {
+        "ports": [
+          "rgbPWM_0/rgbRED",
+          "rgbRED_0"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "microblaze_mcs_0/Clk",
+          "proc_sys_reset_0/slowest_sync_clk"
+        ]
+      }
+    }
+  }
+}

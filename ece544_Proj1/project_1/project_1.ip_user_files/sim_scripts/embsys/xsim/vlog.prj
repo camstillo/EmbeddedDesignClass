@@ -1,0 +1,12 @@
+verilog xil_defaultlib  \
+"../../../bd/embsys/ip/embsys_microblaze_mcs_0_0/bd_0/ip/ip_6/sim/bd_0ac7_lmb_bram_I_0.v" \
+"../../../bd/embsys/ip/embsys_microblaze_mcs_0_0/bd_0/ip/ip_8/sim/bd_0ac7_xlconcat_0_0.v" \
+"../../../bd/embsys/ip/embsys_microblaze_mcs_0_0/bd_0/sim/bd_0ac7.v" \
+"../../../bd/embsys/ip/embsys_microblaze_mcs_0_0/sim/embsys_microblaze_mcs_0_0.v" \
+"../../../bd/embsys/ip/embsys_rgbPWM_0_0/sim/embsys_rgbPWM_0_0.v" \
+"../../../bd/embsys/sim/embsys.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

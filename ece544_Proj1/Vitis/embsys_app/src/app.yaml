@@ -1,0 +1,3 @@
+domain_path: A:\ECE544_GitHub\ece544_Proj1\Vitis\embsys\export\embsys\sw\standalone_microblaze_mcs_0_microblaze_I
+app_src_dir: A:\Vitis\2024.1\data\embeddedsw\lib\sw_apps\empty_application
+template: empty_application
