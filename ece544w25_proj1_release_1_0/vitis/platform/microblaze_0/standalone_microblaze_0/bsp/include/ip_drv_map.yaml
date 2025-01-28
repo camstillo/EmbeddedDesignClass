@@ -1,0 +1,24 @@
+PWM_Analyzer_0:
+- PWM_Analyzer
+- None
+PWM_Analyzer_1:
+- PWM_Analyzer
+- None
+PWM_Analyzer_2:
+- PWM_Analyzer
+- None
+axi_gpio_0:
+- axi_gpio
+- gpio
+axi_timer_0:
+- axi_timer
+- tmrctr
+mdm_1:
+- mdm
+- uartlite
+microblaze_0_axi_intc:
+- axi_intc
+- intc
+nexys4io_0:
+- nexys4io
+- None

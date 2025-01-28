@@ -1,0 +1,238 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Jan 26 21:24:32 2025
+# Process ID: 12388
+# Current directory: A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1
+# Command line: vivado.exe -log embsys_dlmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source embsys_dlmb_v10_0.tcl
+# Log file: A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1/embsys_dlmb_v10_0.vds
+# Journal file: A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1\vivado.jou
+# Running On        :DESKTOP-BFRN34B
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i5-4690K CPU @ 3.50GHz
+# CPU Frequency     :3570 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :34298 MB
+# Swap memory       :5100 MB
+# Total Virtual     :39398 MB
+# Available Virtual :27716 MB
+#-----------------------------------------------------------
+source embsys_dlmb_v10_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 492.117 ; gain = 199.836
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'a:/ECE544_GitHub/ece544w25_proj1_release_1_0/IP/ece544ip_w25'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'A:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: embsys_dlmb_v10_0
+Command: synth_design -top embsys_dlmb_v10_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14108
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1371.383 ; gain = 446.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'embsys_dlmb_v10_0' [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ip/embsys_dlmb_v10_0/synth/embsys_dlmb_v10_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ipshared/7495/hdl/lmb_v10_v3_0_vh_rfs.vhd:91' bound to instance 'U0' of component 'lmb_v10' [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ip/embsys_dlmb_v10_0/synth/embsys_dlmb_v10_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ipshared/7495/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-3491] module 'FDS' declared at 'A:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41137' bound to instance 'POR_FF_I' of component 'FDS' [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ipshared/7495/hdl/lmb_v10_v3_0_vh_rfs.vhd:170]
+INFO: [Synth 8-6157] synthesizing module 'FDS' [A:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41137]
+INFO: [Synth 8-6155] done synthesizing module 'FDS' (0#1) [A:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41137]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (0#1) [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ipshared/7495/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'embsys_dlmb_v10_0' (0#1) [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ip/embsys_dlmb_v10_0/synth/embsys_dlmb_v10_0.vhd:89]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1483.781 ; gain = 559.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1483.781 ; gain = 559.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1483.781 ; gain = 559.020
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1483.781 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ip/embsys_dlmb_v10_0/embsys_dlmb_v10_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [a:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.gen/sources_1/bd/embsys/ip/embsys_dlmb_v10_0/embsys_dlmb_v10_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1502.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  FDS => FDSE: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1502.488 ; gain = 0.191
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |FDS  |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1502.488 ; gain = 577.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1502.488 ; gain = 559.020
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1502.488 ; gain = 577.727
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1502.488 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1502.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  FDS => FDSE: 1 instance 
+
+Synth Design complete | Checksum: b209dd02
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1502.488 ; gain = 997.219
+INFO: [Common 17-1381] The checkpoint 'A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1/embsys_dlmb_v10_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP embsys_dlmb_v10_0, cache-ID = a0c3947147be69ed
+INFO: [Common 17-1381] The checkpoint 'A:/ECE544_GitHub/ece544w25_proj1_release_1_0/project_1.runs/embsys_dlmb_v10_0_synth_1/embsys_dlmb_v10_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file embsys_dlmb_v10_0_utilization_synth.rpt -pb embsys_dlmb_v10_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 26 21:25:22 2025...

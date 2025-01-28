@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "tcf-debug",
+      "request": "launch",
+      "name": "embsys_app_app_hw_1",
+      "debugType": "baremetal-fpga",
+      "attachToRunningTargetOptions": {
+        "targetSetupMode": "standalone",
+        "executeScript": true,
+        "scriptPath": ""
+      },
+      "autoAttachProcessChildren": false,
+      "target": {
+        "targetConnectionId": "Local",
+        "peersIniPath": "../../../.wsdata/.peers.ini",
+        "context": "fpga"
+      },
+      "targetSetup": {
+        "resetSystem": true,
+        "programDevice": true,
+        "bitstreamFile": "${workspaceFolder}\\embsys_app\\_ide\\bitstream\\nexysa7fpga.bit",
+        "downloadElf": [
+          {
+            "core": "microblaze_0",
+            "resetProcessor": true,
+            "elfFile": "${workspaceFolder}\\embsys_app\\build\\embsys_app.elf",
+            "stopAtEntry": false
+          }
+        ]
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
